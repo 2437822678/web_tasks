@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <style type="text/css">
+      table.one
+      {
+       table-layout: fixed;
+      }
+
+      td{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    </style>
+  </head>
+  <body>
+
+<div class="container"style="padding: 100px 100px 100px;">
+  <div class="jumbotron">
+    <center>
+<h3>&ensp;用户id：<%= @user.id %><h3>
+  <h3>用户帐号：<%= @user.username %><h3>
+    <h3>用户密码：<%= @user.password %><h3>
+
+          <div>
+           <table  border="1" width="600px">
+             <tr>
+              <td width="150px">留言id</td>
+              <td width="150px">留言内容</td>
+              <td width="150px">用户id</td>
+              <td width="150px">留言日期</td>
+             </tr>
+           </table>
+          </div>
+      <% @messages.each do |message| %>
+
+      <div>
+       <table class="one" border="1" width= "600px">
+         <tr>
+          <td width="150px"><%= message.id %></td>
+          <td width="150px"><%= message.content %></td>
+          <td width="150px"><%= message.user_id %></td>
+          <td width="150px"><%= message.created_at %></td>
+         </tr>
+       </table>
+      </div>
+
+      <% end %>
+
+   <p>
+  <form action="/search/resetinfo" method="post">
+    修改留言: <input type="text" name="id" placeholder="id"/>
+    <input type="submit" value="确认" />
+  </form>
+
+</center>
+<h4><a href="/reset">修改密码</a></h4>
+  <p>
+  <a href="/logout">退出登录</a>
+  <p>
+  <a href="/up">返回主页</a>
+
+
+</div>
+</div>
+</body>
+</html>

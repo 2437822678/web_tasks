@@ -1,0 +1,49 @@
+
+<% @posts.each do |post| %>
+<% if post.verify=='T' %>
+  <% if post.category=='art' %>
+
+
+  <center>
+        <div class="row">
+
+          <div class="col-sm-8 blog-main">
+
+            <div class="blog-post">
+              <h2 class="blog-post-title">标题:<%= post.title %></h2>
+              <p class="blog-post-meta"><%= l post.published_at %> by <%= post.user.username%></p>
+               分类:<%= post.category %><p>
+               审核结果:<%= post.verify %><p>
+              内容:<%= post.content %>
+
+
+            </div><!-- /.blog-post -->
+            <h2><p align="left"> 所有评论:</p></h2>
+              <HR style="border:3 double #987cb9" width="100%" color=#987cb9 SIZE=3>
+            <% post.comments.each do |comment| %>
+              <p>  <strong><p align="left">作者:<%= post.user.username %></p></strong>
+                <p>
+                  <strong>评论:</strong>
+
+                   <textarea  name="content" > <%= comment.content %> </textarea></h3>
+                <HR style="border:3 double #987cb9" width="100%" color=#987cb9 SIZE=3>
+            <% end %>
+
+            <p>
+              <%= form_for([post,post.comments.build]) do |f| %>
+              <p>
+
+                <%= f.label :添加评论%>
+                <%= f.text_area :content %>
+                <p>
+                  <%= f.submit "添加"%>
+                  <p>
+                    <% end %>
+
+                </div><!-- /.blog-main -->
+              </div><!-- /.row -->
+                  </center>
+            <% end %>
+          <% end %>
+        <% end %>
+    <%= link_to 'Back', posts_path %>

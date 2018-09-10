@@ -1,0 +1,4 @@
+<h1>show infos<h1>
+  username: <%= @manager.name %><br><br>
+  password: <%= @manager.email %>
+<%= link_to "login",{:controller=>'admin/sessions',:action=>'new'}%>

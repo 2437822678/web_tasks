@@ -1,0 +1,33 @@
+
+  <% if @admin.errors.any? %>
+    <div id="error_explanation">
+      the form contains
+      <p><h2><%= pluralize(@admin.errors.count, "error") %></h2>
+
+      <ul>
+      <% @admin.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="container"style="padding: 100px 300px 10px;">
+  <div class="jumbotron">
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <h1>sign up</h1>
+    <%= form_for(@admin) do |f| %>
+    <%= f.label :adminname %>
+    <%= f.text_field :adminname %><br>&nbsp; &emsp;
+    <%= f.label :email %>
+    <%= f.text_field :email %><br>
+    <%= f.label :password %>
+    <%= f.text_field :password %><br>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+     <% end %>
+  </div>
+</div>
+</div>
+</div>

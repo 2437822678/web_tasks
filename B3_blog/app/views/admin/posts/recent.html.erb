@@ -1,0 +1,143 @@
+
+<h3>1月：</h3>
+<% @feedbacks.each do |feedback| %>
+  <% if feedback.created_at>'2018-01-01 00:00:00 UTC'&&feedback.created_at<'2018-02-01 00:00:00 UTC' %>
+    反馈内容:<%= feedback.content %>
+    <p>
+    时间:<%= feedback.created_at %>
+    <HR style="border:3 double #987cb9" width="100%" color=#987cb9 SIZE=3>
+    <p>
+  <% end %>
+<% end %>
+<p>
+
+
+  <h3>2月：</h3>
+  <% @feedbacks.each do |feedback| %>
+    <% if feedback.created_at>'2018-02-01 00:00:00 UTC'&&feedback.created_at<'2018-03-01 00:00:00 UTC' %>
+    反馈内容:<%= feedback.content %>
+    <p>
+    时间:<%= feedback.created_at %>
+    <HR style="border:3 double #987cb9" width="100%" color=#987cb9 SIZE=3>
+    <% end %>
+  <% end %>
+  <p>
+
+
+    <h3>3月：</h3>
+    <% @feedbacks.each do |feedback| %>
+      <% if feedback.created_at>'2018-03-01 00:00:00 UTC'&&feedback.created_at<'2018-04-01 00:00:00 UTC' %>
+      反馈内容:<%= feedback.content %>
+      <p>
+      时间:<%= feedback.created_at %>
+      <HR style="border:3 double #987cb9" width="100%" color=#987cb9 SIZE=3>
+      <% end %>
+    <% end %>
+    <p>
+
+
+      <h3>4月：</h3>
+      <% @feedbacks.each do |feedback| %>
+        <% if feedback.created_at>'2018-04-01 00:00:00 UTC'&&feedback.created_at<'2018-05-01 00:00:00 UTC' %>
+        反馈内容:<%= feedback.content %>
+        <p>
+        时间:<%= feedback.created_at %>
+        <HR style="border:3 double #987cb9" width="100%" color=#987cb9 SIZE=3>
+        <% end %>
+      <% end %>
+      <p>
+
+
+        <h3>5月：</h3>
+        <% @feedbacks.each do |feedback| %>
+          <% if feedback.created_at>'2018-05-01 00:00:00 UTC'&&feedback.created_at<'2018-06-01 00:00:00 UTC' %>
+          反馈内容:<%= feedback.content %>
+          <p>
+          时间:<%= feedback.created_at %>
+          <HR style="border:3 double #987cb9" width="100%" color=#987cb9 SIZE=3>
+          <% end %>
+        <% end %>
+        <p>
+
+
+          <h3>6月：</h3>
+          <% @feedbacks.each do |feedback| %>
+            <% if feedback.created_at>'2018-06-01 00:00:00 UTC'&&feedback.created_at<'2018-07-01 00:00:00 UTC' %>
+            反馈内容:<%= feedback.content %>
+            <p>
+            时间:<%= feedback.created_at %>
+            <HR style="border:3 double #987cb9" width="100%" color=#987cb9 SIZE=3>
+            <% end %>
+          <% end %>
+          <p>
+
+            <h3>7月：</h3>
+            <% @feedbacks.each do |feedback| %>
+              <% if feedback.created_at>'2018-07-01 00:00:00 UTC'&&feedback.created_at<'2018-08-01 00:00:00 UTC' %>
+              反馈内容:<%= feedback.content %>
+              <p>
+              时间:<%= feedback.created_at %>
+              <HR style="border:3 double #987cb9" width="100%" color=#987cb9 SIZE=3>
+              <% end %>
+            <% end %>
+            <p>
+
+              <h3>8月：</h3>
+              <% @feedbacks.each do |feedback| %>
+                <% if feedback.created_at>'2018-08-01 00:00:00 UTC'&&feedback.created_at<'2018-09-01 00:00:00 UTC' %>
+                反馈内容:<%= feedback.content %>
+                <p>
+                时间:<%= feedback.created_at %>
+                <HR style="border:3 double #987cb9" width="100%" color=#987cb9 SIZE=3>
+                  <p>
+                <% end %>
+              <% end %>
+              <p>
+
+
+                <h3>9月：</h3>
+                <% @feedbacks.each do |feedback| %>
+                  <% if feedback.created_at>'2018-09-01 00:00:00 UTC'&&feedback.created_at<'2018-10-01 00:00:00 UTC' %>
+                  反馈内容:<%= feedback.content %>
+                  <p>
+                  时间:<%= feedback.created_at %>
+                  <HR style="border:3 double #987cb9" width="100%" color=#987cb9 SIZE=3>
+                  <% end %>
+                <% end %>
+                <p>
+
+
+                  <h3>10月：</h3>
+                  <% @feedbacks.each do |feedback| %>
+                    <% if feedback.created_at>'2018-10-01 00:00:00 UTC'&&feedback.created_at<'2018-11-01 00:00:00 UTC' %>
+                    反馈内容:<%= feedback.content %>
+                    <p>
+                    时间:<%= feedback.created_at %>
+                    <HR style="border:3 double #987cb9" width="100%" color=#987cb9 SIZE=3>
+                    <% end %>
+                  <% end %>
+                  <p>
+
+
+                    <h3>11月：</h3>
+                    <% @feedbacks.each do |feedback| %>
+                      <% if feedback.created_at>'2018-11-01 00:00:00 UTC'&&feedback.created_at<'2018-12-01 00:00:00 UTC' %>
+                      反馈内容:<%= feedback.content %>
+                      <p>
+                      时间:<%= feedback.created_at %>
+                      <HR style="border:3 double #987cb9" width="100%" color=#987cb9 SIZE=3>
+                      <% end %>
+                    <% end %>
+                    <p>
+
+
+                      <h3>12月：</h3>
+                      <% @feedbacks.each do |feedback| %>
+                        <% if feedback.created_at>'2018-12-01 00:00:00 UTC'%>
+                        反馈内容:<%= feedback.content %>
+                        <p>
+                        时间:<%= feedback.created_at %>
+                        <HR style="border:3 double #987cb9" width="100%" color=#987cb9 SIZE=3>
+                        <% end %>
+                      <% end %>
+                      <p>

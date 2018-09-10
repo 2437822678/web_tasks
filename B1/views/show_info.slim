@@ -1,0 +1,8 @@
+h1= @info.author
+p Create Date: #{@info.create_at.strftime("%m-%d-%Y") if @info.create_at}
+pre= @info.message
+p <a href="/infos">back to infos index</a>
+p <a href="/infos/#{@info.id}/edit">edit this info</a>
+form action="/infos/#{@info.id}" method="POST"
+  input type="hidden" name="_method" value="DELETE"
+input type="submit" value="delete this info"

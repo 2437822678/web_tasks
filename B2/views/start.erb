@@ -1,0 +1,18 @@
+
+
+<div class="container"style="padding: 200px 300px 100px;">
+	<div class="jumbotron">
+
+    <h3>欢迎<%= @user.username %>用户<h3>
+    <p>
+   <form action="/show/infos" method="get">
+    <button type="submit"class="btn btn-primary btn-lg" >查看所有留言</button>
+      </form>
+    <p>
+
+      <form action="/show/personal" method="get">
+        <button type="submit"class="btn btn-primary btn-lg" >个人主页</button>
+         </form>
+
+  </div>
+</div>

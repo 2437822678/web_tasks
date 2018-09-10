@@ -1,0 +1,23 @@
+<div class="container"style="padding: 100px 300px 10px;">
+<div class="jumbotron">
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(:session,url: admin_login_path) do |f| %>
+    &emsp;
+    <%= f.label :name %>
+
+    <%= f.text_field :name %>
+    <p>
+    &nbsp; &emsp;<%= f.label :email %>
+    <%= f.text_field :email %><br>
+  </p>
+    <p>
+    <%= f.label :password %>
+    <%= f.password_field :password %><br>  
+  </p>
+    &emsp;&emsp;&emsp;  &emsp;&emsp; &emsp;&emsp;&emsp;<%= f.submit "login_in" %>
+     <% end %>
+  </div>
+</div>
+</div>
+</div>

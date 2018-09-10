@@ -1,0 +1,4 @@
+label for="id" Id:
+input#id type="text" name="info[id]" value="#{@info.id}"
+
+input type="submit" name="search "value="search"

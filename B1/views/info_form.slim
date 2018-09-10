@@ -1,0 +1,10 @@
+label for="author" Author:
+input#author type="text" name="info[author]" value="#{@info.author}"
+
+label for="create_at" Date(mm/dd/yyyy):
+input#create_at type="text" name="info[create_at]" value="#{@info.create_at.strftime("%m-%d-%Y") if @info.create_at}"
+
+label for="message" Message:
+textarea#message name="info[Message]" == @info.message
+
+input type="submit" value="Save info"

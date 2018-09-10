@@ -1,0 +1,9 @@
+h1 Infos
+a href="/infos/new" Create a new info
+a href="/infos/search" Search a info
+- if @infos.any?
+  ul#infos
+    -@infos.reverse_each do |info|
+      li <a href="/infos/#{info.id}">#{info.message}</a>
+- else
+p No infos have been created yet!

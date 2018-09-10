@@ -1,0 +1,5 @@
+<h1>show infos<h1>
+  username: <%= @manager.name %><br><br>
+  password: <%= @manager.email %>
+<%= link_to "log out",admin_login_path, method: "delete" %>
+<%= link_to "next",admin_posts_path %>

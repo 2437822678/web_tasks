@@ -1,0 +1,9 @@
+<center>
+<h2>添加反馈:</h2>
+
+<%= form_tag("/posts/recent1") do %>
+<%= label_tag(:content,"反馈内容:") %>
+<%= text_field_tag(:content) %>
+<%= submit_tag("提交")%>
+<% end %>
+</center>

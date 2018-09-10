@@ -1,0 +1,17 @@
+<div class="container"style="padding: 200px 300px 100px;">
+	<div class="jumbotron">
+		<center>
+<form  method="POST" action="/show/search/reset">
+
+ <h4>编辑id为<textarea style="resize:none;width:25px;height:20px" name="id" readonly="readonly"><%= @message.id %></textarea>的留言:
+ </h4>
+ <p>
+		<textarea  name="content"></textarea>
+		<p>
+	<h4>	<input type="submit" name="submit" value="确定" /></h4>
+</form>
+
+<form  method="get" action="/show/personal">
+<h4>	<input type="submit" name="submit" value="返回" /></h4>
+</form>
+</center>

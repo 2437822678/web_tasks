@@ -1,0 +1,3 @@
+h1 Searching using id
+form method="Get" action="/infos/:id"
+== slim :submit_form

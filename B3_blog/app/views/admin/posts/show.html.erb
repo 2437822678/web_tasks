@@ -1,0 +1,55 @@
+
+
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @post.title %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <textarea  name="content" > <%= @post.content %> </textarea>
+</p>
+<p>
+
+<p>
+  <strong>Author:</strong>
+
+</p>
+
+<p>
+  <strong>Published at:</strong>
+  <%= @post.published_at %>
+</p>
+<p>
+<strong>the result of verifing:</strong>
+<%= @post.verify %>
+<p>
+  <h2>verify</h2>
+  <%= form_for(@post,url:admin_post_path(@post)) do |f|%>
+    <%= f.hidden_field :title, :value=>@post.title %>
+    <%= f.hidden_field :content, :value=>@post.content %>
+    <%= f.hidden_field :published_at, :value=>@post.published_at %>
+    <%= f.select(:verify, ['T','F'])%>
+    <%= f.submit "审核"%>
+  <% end %>
+</p>
+
+<h2>comments</h2>
+  <HR style="border:3 double #987cb9" width="100%" color=#987cb9 SIZE=3>
+<% @post.comments.each do |comment| %>
+  <p>  <strong>author:</strong>
+
+    <p>
+      <strong>content:</strong>
+
+       <textarea  name="content" > <%= comment.content %> </textarea></h3>
+       <%= link_to 'destroy',admin_comment_path, method: :delete, id1: comment.id%>
+       <h2>verify</h2>
+    <HR style="border:3 double #987cb9" width="100%" color=#987cb9 SIZE=3>
+<% end %>
+
+<%= link_to 'Edit', edit_admin_post_path(@post) %> |
+<%= link_to 'Back', admin_posts_path %>
